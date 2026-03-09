@@ -32,19 +32,22 @@ Scan the QR code with **Expo Go** (Android) or the **Camera app** (iOS) to run t
 - **Filter tasks** – Filter by All, Active, or Completed
 - **Local persistence** – Tasks are saved via AsyncStorage and persist across app restarts
 
-## Tech Stack
+## Libraries Used & Why
 
-| Technology | Purpose |
-|------------|---------|
-| React Native | Cross-platform mobile framework |
-| Expo | Development tooling and runtime |
-| TypeScript | Type safety |
-| AsyncStorage | Local data persistence |
+| Library | Why I chose it |
+|---------|----------------|
+| **React Native** | Cross-platform framework so the app runs on iOS and Android from one codebase. Familiar React patterns and large ecosystem. |
+| **Expo** | Simplifies setup (no native build tooling required), provides a managed workflow, and enables quick iteration via Expo Go. |
+| **TypeScript** | Adds static typing for fewer runtime errors, better editor support, and clearer contracts for components and data. |
+| **AsyncStorage** | React Native's recommended solution for simple key-value persistence. No backend needed—tasks are stored locally on the device. |
+| **expo-status-bar** | Lets the status bar adapt to the app's theme (e.g. light/dark content) for better visual consistency. |
 
 ## Future Improvements
 
-- Edit tasks
-- Completion animations
-- Unit and integration tests
-- Enhanced UI/UX
-- Offline sync support
+If I had more time, I would:
+
+- **Edit and delete tasks** – Inline editing and swipe-to-delete for better task management- for now it's just a minor X to delete from local storage.
+- **Completion animations** – Smooth transitions when marking tasks complete
+- **Unit and integration tests** – Jest/React Native Testing Library for reliability
+- **Enhanced UI/UX** – Improved visual design, accessibility, and interaction patterns
+- **Offline sync support** – Cloud backup and sync across devices when back online
